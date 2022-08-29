@@ -12,9 +12,9 @@ struct cad
     float valor_conta;
 };
 
-cad *cadastro(cad user[2])
+cad *cadastro(cad user[5])
 {
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 5; i++)
     {
         cout << "Digite o nome do usuário: ";
         cin >> user[i].nome;
@@ -30,12 +30,12 @@ cad *cadastro(cad user[2])
     return user;
 }
 
-cad *bubble_sort(cad user[2])
+cad *bubble_sort(cad user[5])
 {
     cad aux;
-    for (int c = 0; c < 2; c++)
+    for (int c = 0; c < 5; c++)
     {
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 4; i++)
         {
             if (user[i].valor_conta < user[i + 1].valor_conta)
             {
@@ -52,17 +52,17 @@ int main()
 {
     setlocale(LC_ALL, "Portuguese");
 
-    cad user[2], teste[2];
+    cad user[5];
 
-    user[2] = *cadastro(user);
-    user[2] = *bubble_sort(user);
+    user[5] = *cadastro(user);
+    user[5] = *bubble_sort(user);
     
     cout << endl;
 
-    for (int a = 0; a < 2; a++)
+    for (int a = 0; a < 5; a++)
     {
-        cout << "Os cpf são: " << user[a].cpf << endl;
-        cout << "Os nomes são: " << user[a].nome << endl;
+        cout << "O nome é: " << user[a].nome << endl;
+        cout << "O cpf é: " << user[a].cpf << endl;
         cout << "O valor é: " << user[a].valor_conta << endl;
 
         cout << "-------------------------------------- \n";
