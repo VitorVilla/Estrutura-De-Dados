@@ -56,7 +56,7 @@ int main()
 
     user[5] = *cadastro(user);
     user[5] = *bubble_sort(user);
-    
+
     cout << endl;
 
     for (int a = 0; a < 5; a++)
