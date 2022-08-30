@@ -1,5 +1,4 @@
 #include <iostream>
-#include <math.h>
 #include <locale>
 #include <cstdlib>
 
@@ -39,20 +38,34 @@ Pessoa *cadastro(Pessoa user[2])
     return user;
 }
 
+Pessoa *bubble_sort(Pessoa user[2])
+{
+    Pessoa aux;
+    for (int c = 0; c < 2; c++)
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            if (user[i].data.ano < user[i + 1].data.ano)
+            {
+                aux = user[i];
+                user[i] = user[i + 1];
+                user[i + 1] = aux;
+            }
+        }
+    }
+    return user;
+}
+
 int main()
 {
 
-    Pessoa user[2];
+    Pessoa user[2], sla[2];
 
     user[2] = *cadastro(user);
+    sla[2] = *bubble_sort(user);
 
-    for (int a = 0; a < 2; a++)
-    {
-        cout << "O nome é: " << user[a].nome << endl;
-        cout << "A data é: " << user[a].data.dia << "/" << user[a].data.mes << "/" << user[a].data.ano << endl;
-
-        cout << "-------------------------------------- \n";
-    }
+    cout << "O nome é: " << sla[0].nome << endl;
+    cout << "A data é: " << sla[0].data.dia << "/" << sla[0].data.mes << "/" << sla[0].data.ano << endl;
 
     return 0;
 }
