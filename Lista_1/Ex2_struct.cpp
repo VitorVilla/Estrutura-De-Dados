@@ -4,22 +4,27 @@
 
 using namespace std;
 
-struct Data
+int main()
 {
-    int dia;
-    int mes;
-    int ano;
-};
 
-struct Pessoa
-{
-    string nome;
-    Data data;
-};
+    struct Data
+    {
+        int dia;
+        int mes;
+        int ano;
+    };
 
-Pessoa *cadastro(Pessoa user[2])
-{
-    for (int i = 0; i < 2; i++)
+    struct Pessoa
+    {
+        string nome;
+        Data data;
+    };
+
+    Pessoa user[5];
+    int auxD, auxM, auxA;
+    string auxN;
+
+    for (int i = 0; i < 5; i++)
     {
         cout << "Digite o nome do usuário: ";
         cin >> user[i].nome;
@@ -35,37 +40,70 @@ Pessoa *cadastro(Pessoa user[2])
 
         cout << endl;
     }
-    return user;
-}
 
-Pessoa *bubble_sort(Pessoa user[2])
-{
-    Pessoa aux;
-    for (int c = 0; c < 2; c++)
+    for (int i = 0; i < 5; i++)
     {
-        for (int i = 0; i < 1; i++)
+        for (int c = i + 1; c < 4; c++)
         {
-            if (user[i].data.ano < user[i + 1].data.ano || user[i].data.mes < user[i + 1].data.mes || user[i].data.dia < user[i + 1].data.dia)
+            if (user[i].data.ano > user[c].data.ano)
             {
-                aux = user[i];
-                user[i] = user[i + 1];
-                user[i + 1] = aux;
+                auxA = user[i].data.ano;
+                user[i].data.ano = user[c].data.ano;
+                user[c].data.ano = auxA;
+
+                auxM = user[i].data.mes;
+                user[i].data.mes = user[c].data.mes;
+                user[c].data.mes = auxM;
+
+                auxD = user[i].data.dia;
+                user[i].data.dia = user[c].data.dia;
+                user[c].data.dia = auxD;
+
+                auxN = user[i].nome;
+                user[i].nome = user[c].nome;
+                user[c].nome = auxN;
+            }
+            else if (user[i].data.mes > user[c].data.mes)
+            {
+                auxA = user[i].data.ano;
+                user[i].data.ano = user[c].data.ano;
+                user[c].data.ano = auxA;
+
+                auxM = user[i].data.mes;
+                user[i].data.mes = user[c].data.mes;
+                user[c].data.mes = auxM;
+
+                auxD = user[i].data.dia;
+                user[i].data.dia = user[c].data.dia;
+                user[c].data.dia = auxD;
+
+                auxN = user[i].nome;
+                user[i].nome = user[c].nome;
+                user[c].nome = auxN;
+            }
+            else if (user[i].data.dia > user[c].data.dia)
+            {
+                auxA = user[i].data.ano;
+                user[i].data.ano = user[c].data.ano;
+                user[c].data.ano = auxA;
+
+                auxM = user[i].data.mes;
+                user[i].data.mes = user[c].data.mes;
+                user[c].data.mes = auxM;
+
+                auxD = user[i].data.dia;
+                user[i].data.dia = user[c].data.dia;
+                user[c].data.dia = auxD;
+
+                auxN = user[i].nome;
+                user[i].nome = user[c].nome;
+                user[c].nome = auxN;
             }
         }
     }
-    return user;
-}
 
-int main()
-{
-
-    Pessoa user[2], sla[2];
-
-    user[2] = *cadastro(user);
-    sla[2] = *bubble_sort(user);
-
-    cout << "O nome é: " << sla[0].nome << endl;
-    cout << "A data é: " << sla[0].data.dia << "/" << sla[0].data.mes << "/" << sla[0].data.ano << endl;
+    cout << "O nome é: " << user[0].nome << endl;
+    cout << "A data é: " << user[0].data.dia << "/" << user[0].data.mes << "/" << user[0].data.ano << endl;
 
     return 0;
 }
