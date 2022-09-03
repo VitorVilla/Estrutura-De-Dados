@@ -29,7 +29,7 @@ void triangulo(Ponto pa, Ponto pb, Ponto pc, Ponto pA, Ponto pB, Ponto pC)
 {
     Triangulo T1, T2;
 
-    float a, b, c, ab, bb, cb;
+    float a, b, c, a2, b2, c2;
 
     T1.A = pa;
     T1.B = pb;
@@ -43,9 +43,9 @@ void triangulo(Ponto pa, Ponto pb, Ponto pc, Ponto pA, Ponto pB, Ponto pC)
     b = calculo(T1.B, T1.C);
     c = calculo(T1.A, T1.C);
 
-    ab = calculo(T2.A, T2.B);
-    bb = calculo(T2.B, T2.C);
-    cb = calculo(T2.A, T2.C);
+    a2 = calculo(T2.A, T2.B);
+    b2 = calculo(T2.B, T2.C);
+    c2 = calculo(T2.A, T2.C);
 
     if ((a == b) && (b == c))
     {
@@ -62,11 +62,11 @@ void triangulo(Ponto pa, Ponto pb, Ponto pc, Ponto pA, Ponto pB, Ponto pC)
 
     cout << "----------------------- \n";
 
-    if ((ab == bb) && (bb == cb))
+    if ((a2 == b2) && (b2 == c2))
     {
         cout << "O triângulo 2 é equilátero";
     }
-    else if ((ab != bb) && (ab != cb) && (bb != cb))
+    else if ((a2 != b2) && (a2 != c2) && (b2 != c2))
     {
         cout << "O triângulo 2 é escaleno";
     }
