@@ -45,7 +45,7 @@ Pessoa *bubble_sort(Pessoa user[2])
     {
         for (int i = 0; i < 1; i++)
         {
-            if (user[i].data.ano < user[i + 1].data.ano or user[i].data.mes < user[i + 1].data.mes or user[i].data.dia < user[i + 1].data.dia)
+            if (user[i].data.ano < user[i + 1].data.ano || user[i].data.mes < user[i + 1].data.mes || user[i].data.dia < user[i + 1].data.dia)
             {
                 aux = user[i];
                 user[i] = user[i + 1];
