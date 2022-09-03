@@ -1,6 +1,7 @@
 #include <iostream>
 #include <locale>
 #include <cstdlib>
+#include <iomanip>
 
 using namespace std;
 
