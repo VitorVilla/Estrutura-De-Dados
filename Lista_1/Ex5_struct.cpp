@@ -56,9 +56,9 @@ int main()
                 if (pedido.qunatidade_produto <= produtos[i].quantidade)
                 {
                     produtos[i].quantidade -= pedido.qunatidade_produto;
-                    cout << "Item vendido: " << produtos[i].codigo << endl;
+                    cout << "Item pedido: " << produtos[i].codigo << endl;
                     cout << "Quantidade vendida: " << pedido.qunatidade_produto << endl;
-                    cout << "Restam no estoque: " << produtos[i].quantidade << endl;
+                    cout << "Novo saldo do estoque: " << produtos[i].quantidade << endl;
                     cout << "-------------------- \n";
                 }
                 else if (pedido.qunatidade_produto > produtos[i].quantidade)
