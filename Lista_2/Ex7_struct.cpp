@@ -56,5 +56,5 @@ int main()
         cout << "";
     }
 
-    //N ENTENDI O ENUNCIADO
+    // N ENTENDI O ENUNCIADO
 }
