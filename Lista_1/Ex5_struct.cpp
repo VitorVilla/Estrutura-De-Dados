@@ -22,13 +22,11 @@ struct Pedido
 int main()
 {
 
-    setlocale(LC_ALL, "Portuguese");
-
-    Prod produtos[2];
+    Prod produtos[5];
     Pedido pedido;
     string resp = "sim";
 
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 5; i++)
     {
         cout << "Digite o código do produto " << i + 1 << endl;
         cin >> produtos[i].codigo;
@@ -49,7 +47,7 @@ int main()
         cin >> pedido.qunatidade_produto;
         cout << "-------------------- \n";
 
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 5; i++)
         {
             if (pedido.codigo_produto == produtos[i].codigo)
             {

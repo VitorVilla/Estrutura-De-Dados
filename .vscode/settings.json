@@ -3,6 +3,8 @@
         "iostream": "cpp",
         "cstdlib": "cpp",
         "iomanip": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "*.tcc": "cpp",
+        "ostream": "cpp"
     }
 }
