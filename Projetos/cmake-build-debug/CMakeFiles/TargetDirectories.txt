@@ -1,0 +1,3 @@
+C:/Users/vivin/CLionProjects/portaria/cmake-build-debug/CMakeFiles/portaria.dir
+C:/Users/vivin/CLionProjects/portaria/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/vivin/CLionProjects/portaria/cmake-build-debug/CMakeFiles/rebuild_cache.dir
