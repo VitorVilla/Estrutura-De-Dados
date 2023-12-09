@@ -40,7 +40,4 @@ Este é um projeto da disciplina de "Estrutura de Dados" voltado para alunos com
 6. **Relatório de Visitas no Dia em Arquivo Texto (.txt) (1 ponto):**
     - Crie uma função para gerar um relatório de visitas no dia, mas a saída precisa ocorrer em um arquivo de texto (.txt).
 
----
-
-**Observação:** Certifique-se de adaptar e testar o código de acordo com as especificações do projeto e os requisitos da disciplina.
 
